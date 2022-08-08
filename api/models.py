@@ -23,3 +23,9 @@ class Comments(models.Model):
         ordering = ['created']
 
 
+class Categories(models.Model):
+    category_title = models.CharField(max_length=250)
+    owner = models.ForeignKey('auth.User', related_name='category', on_delete=models.CASCADE)
+    post = models.ForeignKey('Post', related_name='category', on_delete=models.CASCADE)
+
+

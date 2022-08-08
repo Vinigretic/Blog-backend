@@ -9,6 +9,8 @@ urlpatterns = [
     path('posts/<int:pk>/', views.PostDetail.as_view()),
     path('comments/', views.CommentsList.as_view()),
     path('comments/<int:pk>/', views.CommentsDetail.as_view()),
+    path('categories/', views.CategoriesList.as_view()),
+    path('categories/<int:pk>/', views.CategoriesDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
